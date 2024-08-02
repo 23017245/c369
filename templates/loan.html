@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/loan.css">
+  <title>Loan Application</title>
+</head>
+<body>
+  <div id="nav">
+    <div id="logo-container">
+      <img src="../images/logo.png" width="60px" height="60px" alt="logo">
+      <p id="logo"> QUICKLEND <br> INSTITUTION</p>
+    </div>
+    <div id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a id="active" href="wallet.html">Wallet</a>
+    </div>
+  </div>
+
+  <body>
+      <h1>Find a loan with QuickLend in three simple steps</h1>
+      
+      <div class="timeline">
+        <div class="timeline">
+          <div class="step-container">
+              <div class="step active" data-step="1">1</div>
+              <div class="step-label active">Step 1</div>
+          </div>
+          <div class="step-container">
+              <div class="step" data-step="2">2</div>
+              <div class="step-label">Step 2</div>
+          </div>
+          <div class="step-container">
+              <div class="step" data-step="3">3</div>
+              <div class="step-label">Step 3</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content">
+          <button class="nav-button prev" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="slide active">
+              <div class="phone-image"></div>
+              <div class="text-content">
+                  <h2>Appply securely with Singpass</h2>
+                  <p>Only necessary information from your application will be used to process your loan. <br>We do not share your contact details with third party platforms.</p>
+                  <button class="cta-button">APPLY NOW →</button>
+              </div>
+          </div>
+          <div class="slide">
+              <div class="phone-image"></div>
+              <div class="text-content">
+                  <h2>Compare</h2>
+                  <p>Review and compare loan offers from our partners.</p>
+                  <button class="cta-button">COMPARE NOW →</button>
+              </div>
+          </div>
+          <div class="slide">
+              <div class="phone-image"></div>
+              <div class="text-content">
+                  <h2>Get your money</h2>
+                  <p>After final checks and digital contract signing, you will receive your loan.</p>
+                  <button class="cta-button">GET LOAN →</button>
+              </div>
+          </div>
+          <button class="nav-button next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+  
+      <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.slide');
+          const steps = document.querySelectorAll('.step');
+  
+          function changeSlide(n) {
+              slides[currentSlide].classList.remove('active');
+              steps[currentSlide].style.backgroundColor = '#4CAF50';
+  
+              currentSlide = (currentSlide + n + slides.length) % slides.length;
+  
+              slides[currentSlide].classList.add('active');
+              steps[currentSlide].style.backgroundColor = '#45a049';
+          }
+      </script>
+  </body>
+  </html>

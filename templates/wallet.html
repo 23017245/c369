@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/wallet.css">
+  <title>Services</title>
+
+</head>
+
+<body>
+  <div id="nav">
+    <div id="logo-container">
+      <img src="../images/logo.png" width="60px" height="60px" alt="logo">
+      <p id="logo"> QUICKLEND <br> INSTITUTION</p>
+    </div>
+    <div id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a id="active" href="wallet.html">Wallet</a>
+    </div>
+  </div>
+
+  <div id="wallet-page">
+    <div id="transaction-container">
+      <div id="balance-container">
+        <div id="inner-container">
+          <h1 id="balance">$100</h1>
+          <h3>Current Wallet Balance</h3>
+        </div>
+        <div id="top-up-btn" class="action-btn">
+          + Top Up Wallet
+        </div>
+      </div>
+      <h1 style="text-align: center">All Transaction Details</h1>
+      <div id="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>SHOP NAME</th>
+              <th>WITHDRAWAL</th>
+              <th>DEPOSIT</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="transaction-table-body">
+            <tr>
+              <td>Add Money to Wallet <br> Transaction ID: 123456789 <br> 04 June 2024, 03:37pm</td>
+              <td>None</td>
+              <td>$100</td>
+              <td>Completed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="payment-container">
+      <div id="make-payment">
+        Make Payment
+      </div>
+      <p class="heading" style="margin-bottom: 0;">Currency:</p>
+      <p class="heading" style="margin-top: 5px;"><img src="../images/singapore.png" width="20px" alt=""> Singapore
+        Dollar
+      </p>
+      <h2 class="heading" style="margin-top: 40px; margin-bottom: 5px">Transaction Amount:</h2>
+      <input id="amount-input" type="number">
+      <div style="display: flex; justify-content: center">
+        <div id="pay-btn">
+          <img src="../images/cash.png" width="30px" alt="pay btn">
+          <p style="margin: 0;">Pay</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../wallet.js"> </script>
+</body>
+
+</html>
