@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/payment.css">
-    <title>Student Loan Page</title>
+    <title>Payment</title>
 
 </head>
 <body>
-    <header>
-        <h1>Student Loan Page</h1>
-    </header>
+    <div id="nav">
+        <div id="logo-container">
+          <img src="../images/logo.png" width="60px" height="60px" alt="logo">
+          <p id="logo"> QUICKLEND <br> INSTITUTION</p>
+        </div>
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="loan.html">Loans</a>
+            <a href="wallet.html">Wallet</a>
+            <a id="active" href="payment.html">Payment</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+          </div>
+      </div>
     <div class="container">
         <section>
             <h2>Loan Due Dates and Amounts</h2>
@@ -19,29 +31,19 @@
                 <tr>
                     <th>Due Date</th>
                     <th>Amount</th>
+                    <th>Action</th>
                 </tr>
                 <tr>
-                    <td>2024-08-01</td>
+                    <td>2024-08-14</td>
                     <td>$500</td>
+                    <td><button onclick="pay(500)">Pay</button></td>
                 </tr>
                 <tr>
-                    <td>2024-09-01</td>
+                    <td>2024-09-14</td>
                     <td>$500</td>
+                    <td><button onclick="pay(500)">Pay</button></td>
                 </tr>
             </table>
-        </section>
-
-        <section>
-            <h2>Set Reminder for Upcoming Loans</h2>
-            <div class="reminder">
-                <label for="reminder-date">Reminder Date:</label>
-                <input type="date" id="reminder-date" name="reminder-date">
-                
-                <label for="reminder-message">Reminder Message:</label>
-                <input type="text" id="reminder-message" name="reminder-message" placeholder="Enter reminder message">
-                
-                <button type="button">Set Reminder</button>
-            </div>
         </section>
 
         <section>
@@ -74,24 +76,22 @@
                 </tr>
                 <tr>
                     <td>2024-07-01</td>
-                    <td><a href="#">View Statement</a></td>
+                    <td><a href="images/bank-statement-template.jpg">View Statement</a></td>
                 </tr>
                 <tr>
                     <td>2024-06-01</td>
-                    <td><a href="#">View Statement</a></td>
+                    <td><a href="images/bank-statement-template.jpg">View Statement</a></td>
                 </tr>
             </table>
         </section>
-    </div>
-    <footer>
-        <p>&copy; 2024 Student Financial Management. All rights reserved.</p>
-        <p>
-            <a href="#">Privacy Policy</a> |
-            <a href="#">Terms of Service</a> |
-            <a href="contact.html">Contact</a>
-        </p>
-    </footer>
- 
+    </div> 
+    <script>
+    function pay(amount) {
+        if (confirm(`Are you sure you want to pay $${amount}?`)) {
+            window.location.href = `wallet.html?amount=${amount}`;
+        }
+    }
+</script>
 </body>
 </html>
 

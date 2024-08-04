@@ -1,48 +1,48 @@
-   #main-heading {
-     font-size: 50px;
-     margin-top: 30px;
-     text-align: center;
-   }
+#main-heading {
+  font-size: 50px;
+  margin-top: 30px;
+  text-align: center;
+}
 
-   #wallet-page {
-     display: flex;
-     flex-direction: column-reverse;
-     margin-top: 50px;
-     gap: 50px;
-   }
+#wallet-page {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 50px;
+  gap: 50px;
+}
 
-   #transaction-container {
-     width: 100%;
-   }
+#transaction-container {
+  width: 100%;
+}
 
-   #payment-container {
-     width: auto;
-     background-color: #D2D9ED;
-     padding: 20px;
-   }
+#payment-container {
+  width: auto;
+  background-color: #D2D9ED;
+  padding: 20px;
+}
 
-   #balance-container {
-     background-color: #A7AAE3;
-     color: #051BB0;
-     padding: 20px 50px;
-     text-align: center;
-     font-size: 20px;
-     border-radius: 30px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-   }
+#balance-container {
+  background-color: #A7AAE3;
+  color: #051BB0;
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-   .action-btn {
-     background-color: #5360C7;
-     color: white;
-     padding: 20px 40px;
-     font-size: 18px;
-     border-radius: 9999px;
-     cursor: pointer;
-     text-align: center;
-   }
+.action-btn {
+  background-color: #5360C7;
+  color: white;
+  padding: 20px 40px;
+  font-size: 18px;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-align: center;
+}
 
    #make-payment {
      background-color: #5360C7;

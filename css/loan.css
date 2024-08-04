@@ -1,127 +1,234 @@
-body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.calculator-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #8D9CD3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top:50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
     margin: 0;
-    padding: 20px;
-    background-color: white;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    
+}
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs {
+    flex: 1;
+    margin-right: 30px;
+    max-width: 50%;
+}
+
+.results {
+    flex: 1;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.circle-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(#4A90E2 93%, #B8C5E2 7%);
+    position: relative;
+    margin: 0 auto;
+}
+
+.circle-chart::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.total-payment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.total-payment h2 {
+    margin: 0;
+    font-size: 24px;
+    color: black;
+}
+
+.total-payment p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.result-details {
+    margin-top: 20px;
+}
+
+.result-details p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+/* Benefits Section */
+.benefit-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    margin-top:100px;
+    
 }
 h1 {
     text-align: center;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
 }
-.timeline {
+.subtitle {
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
+.benefits {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
-    margin-left: 200px;
+    flex-wrap: wrap;
+    margin-top: 90px;
 }
-.step {
-    width: 30px;
-    height: 30px;
+.benefit {
+    background-color: #8D9CD3;
+    border-radius: 8px;
+    padding: 20px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.icon {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background-color: #4CAF50;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 100px;
+    margin: 0 auto 15px;
+    font-size: 30px;
 }
-.content {
+.icon-credit { background-color: #FFEDDE; }
+.icon-flexible { background-color: #E6F7F0; }
+.icon-application { background-color: #FFE6E6; }
+
+/* Contact Section */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.contact-content {
+    flex: 1;
+    padding-right: 40px;
 }
-.phone-image {
-    width: 250px;
-    height: 400px;
-    background-color: #f0f0f0;
-    border-radius: 20px;
-    margin-left: 300px;
-    margin-bottom: 50px;
-    
+
+.contact-content h1 {
+    padding-right:25px;
 }
-.text-content {
-    max-width: 50%;
-    padding-top: 20px;
-    padding-left: 100px;
-}
-.cta-button {
-    background-color: #4CAF50;
-    color: white;
+
+.contact-button {
+    display: inline-block;
     padding: 10px 20px;
-    border: none;
+    background-color: #ffffff;
+    color: #007bff;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
+    border: 2px solid #007bff;
+    transition: all 0.3s ease;
 }
-.slide {
-    display: none;
+
+.contact-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
 }
-.slide.active {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+
+.image-container {
+    flex: 1;
+    background-color: #8EE49B;
+    border-radius: 20px;
+    overflow: hidden;
 }
-.nav-button {
-    position: absolute;
-    top: 50%;
-    background: none;
-    border: none;
-    font-size: 24px;
+
+.team-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.apply-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
 }
-.prev {
-    left: 10px;
-}
-.next {
-    right: 10px;
-}
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    position: relative;
-}
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #ccc;
-    z-index: -1;
-}
-
-.step-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.step {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ccc;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;
-}
-
-.step.active {
-    background-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-}
-
-.step-label {
-    font-size: 14px;
-    color: #ccc;
-}
-
-.step-label.active {
-    color: #4CAF50;
+.apply-now-button:hover {
+    background-color: #0056b3;
 }

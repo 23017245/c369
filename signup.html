@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/signup.css">
+  <title>Sign up</title>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo-container">
+          <img src="../images/logo.png" width="60px" height="60px" alt="logo">
+          <p id="logo"> QUICKLEND <br> INSTITUTION</p>
+        </div>
+        <div id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="wallet.html">Wallet</a>
+          <a href="loan.html">Loans</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+    <div class="main-body">
+        <div class="singpass">
+            <img src="images/singpass-logo-light.png" alt="Money Pot">
+            <img src="images/Personal-loan-sign-up.png" alt="Singpass">
+            <h3>Create an account</h3>
+            <button id="singpass-btn" onclick="window.open('https://login.singpass.gov.sg/main?scope=openid&response_type=code&redirect_uri=https%3A%2F%2Fwww.singpass.gov.sg%2Fhome%2Fui%2Fcallback%2Fauth&state=42f38d24-5630-49f8-bdba-0cb421587717&nonce=cd01e32d-1983-4686-b172-4c80dcc8315e&client_id=ntmRnh1tflHVnWsik9AN1Fn2Cx7X8gVw&pwd_enabled=true', '_blank');">Retrieve MyInfo with Singpass</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('singpass-btn').addEventListener('click', function() {
+            window.location.href = 'login.html'
+        })
+    </script>
+</body>
+</html>

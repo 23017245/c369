@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/login.css">
   <title>Login</title>
-
+</head>
 <body>
   <div id="nav">
     <div id="logo-container">
@@ -15,12 +15,49 @@
       <p id="logo"> QUICKLEND <br> INSTITUTION</p>
     </div>
     <div id="nav-links">
-      <a id="active" href="home.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="wallet.html">Wallet</a>
       <a href="loan.html">Loans</a>
+      <a href="wallet.html">Wallet</a>
+      <a href="payment.html">Payment</a>
       <a href="contact.html">Contact Us</a>
       <a id="active" href="login.html">Login</a>
     </div>
   </div>
+  <div class="main-body">
+  <div class="container">
+    <form action="wallet.html" method="get">
+        <div class="form-group">
+            <label for="email">Email / Mobile Phone</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-input">
+                <input type="password" id="password" name="password">
+            </div>
+        </div>
+        <div class="login-btn" style="text-align: center;">
+          <button type="submit" class="login-btn">LOGIN</button>
+        </div>
+    </form>
+    <div class="text-center" style="margin-top: 20px;">
+      <a href="signup.html">No account? Create new account</a>
+    </div>
+    <div class="text-or" style="margin-top: 20px;">
+        ---------- OR ----------
+    </div>
+    <div id="singpass">
+      <img id="singpass-btn" src="images/singpass-logo-light.png">
+    </div>
+  </div>
+  </div>
+  <script>
+    document.getElementById('singpass-btn').addEventListener('click', function() {
+        window.open('https://login.singpass.gov.sg/main?scope=openid&response_type=code&redirect_uri=https%3A%2F%2Fwww.singpass.gov.sg%2Fhome%2Fui%2Fcallback%2Fauth&state=42f38d24-5630-49f8-bdba-0cb421587717&nonce=cd01e32d-1983-4686-b172-4c80dcc8315e&client_id=ntmRnh1tflHVnWsik9AN1Fn2Cx7X8gVw&pwd_enabled=true')
+        window.location.href = "wallet.html"
+    })
+    
+</script>
 </body>
+</html>

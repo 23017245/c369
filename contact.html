@@ -5,9 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/contact.css">
   <title>Contact</title>
-
+</head>
 <body>
+  <div id="nav">
+    <div id="logo-container">
+      <img src="../images/logo.png" width="60px" height="60px" alt="logo">
+      <p id="logo"> QUICKLEND <br> INSTITUTION</p>
+    </div>
+    <div id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="loan.html">Loans</a>
+      <a href="wallet.html">Wallet</a>
+      <a href="payment.html">Payment</a>
+      <a id="active" href="contact.html">Contact Us</a>
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="contact-section">
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <p>Email: support@quicklend.sg</p>
+            <p>Phone: +65 6543 3210</p>
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5533339967915!2d103.78298867441005!3d1.4428309985435874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1305aa7388d7%3A0x2b7f5e0463382f8!2sRepublic%20Polytechnic!5e0!3m2!1sen!2ssg!4v1722757784257!5m2!1sen!2ssg"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+            <input id="name"type="text" placeholder="Your Name">
+            <input id="number" type="tel" placeholder="Your Phone Number">
+            <input id="email" type="text" placeholder="Your email">
+            <input id="message" type="text" placeholder="messsage">
+            <button id="btn" type="submit">Submit</button>
+    </div>
+</div>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value.trim();
+            const contactNumber = document.getElementById('number').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
     
+            if (!name || !contactNumber || !email || !message ) {
+                alert('Please fill in all the required fields.');
+                event.preventDefault();
+            } else {
+                alert('Thank you for your submission. We will get back to you within an hour.');
+            }
+       });
+</script>
 </body>
+</html>

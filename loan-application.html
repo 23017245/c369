@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <title>Loan Application Form</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #8D9CD3;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-family: 'Open Sans', sans-serif;
+        }
+        h2 {
+            text-align: center;
+            color: whitesmoke;
+        }
+        .subtitle {
+            text-align: center;
+            color: whitesmoke;
+            margin-bottom: 30px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 98%;
+        }
+        .form-group {
+            width: 48%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: whitesmoke;
+            font-family: 'Open Sans', sans-serif;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        textarea {
+            height: 100px;
+        }
+        .privacy-note {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .privacy-note img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        .privacy-note p {
+            font-size: 14px;
+            color: whitesmoke;
+        }
+        #submit-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: #007bff;
+            color: whitesmoke;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo-container">
+          <img src="../images/logo.png" width="60px" height="60px" alt="logo">
+          <p id="logo"> QUICKLEND <br> INSTITUTION</p>
+        </div>
+        <div id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="wallet.html">Wallet</a>
+          <a href="loan.html">Loans</a>
+          <a href="payment.html">Payment</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+      <br>  
+      <br>
+    <div class="container">
+        <h2>Have questions? You can send it in your application below. <br>It just takes five minutes.</h2>
+        <p class="subtitle">We will get back to you within one hour.</p>
+        
+        <form id="loan-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Full Name: *</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number: *</label>
+                    <input type="tel" id="contactNumber" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="loanAmount">Loan Amount Required: *</label>
+                    <input type="number" id="loanAmount" required>
+                </div>
+                <div class="form-group">
+                    <label for="monthlyIncome">Monthly Income: *</label>
+                    <input type="number" id="monthlyIncome" required>
+                </div>
+            </div>
+            <div class="form-group" style="width: 98%;">
+                <label for="enquiry">Enquiry / Messages:</label>
+                <textarea id="enquiry"></textarea>
+            </div>
+            
+            <div class="privacy-note">
+                <img src="images/privacy.png" alt="Privacy Shield">
+                <p>Your Privacy and Security, Protected.<br> We take full measures to protect your identity. By submitting this form, you agree to be contacted with the information stated above. Your application is 100% confidential.</p>
+            </div>
+            
+            <button type="submit" id="submit-btn">Submit Application</button>
+        </form>
+    </div>
+    <script>
+       document.getElementById('loan-form').addEventListener('submit', function(event) {
+            const fullName = document.getElementById('fullName').value.trim();
+            const contactNumber = document.getElementById('contactNumber').value.trim();
+            const monthlyIncome = document.getElementById('monthlyIncome').value.trim();
+            const loanAmount = document.getElementById('loanAmount').value.trim();
+    
+            if (!fullName || !contactNumber || !monthlyIncome || !loanAmount ) {
+                alert('Please fill in all the required fields.');
+                event.preventDefault();
+            } else {
+                alert('Thank you for your application. We will get back to you within an hour.');
+            }
+       });
+    </script>
+</body>
+</html>

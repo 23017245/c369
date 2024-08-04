@@ -1,47 +1,46 @@
-  #main-heading {
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
-  }
+#main-heading {
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
+}
 
-  #subheading {
-    font-size: 20px;
-    text-align: center;
-  }
+#subheading {
+  font-size: 20px;
+  text-align: center;
+}
 
-  #learn-more-btn {
-    background-color: white;
-    border: none;
-    color: #16388F;
-    padding: 16px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 40px;
-  }
+#learn-more-btn {
+  background-color: white;
+  border: none;
+  color: #16388F;
+  padding: 16px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 40px;
+}
 
-  #heading-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+#heading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
 
-  }
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
+@media (min-width: 860px) {
   #content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    width: 50%;
   }
 
-  @media (min-width: 860px) {
-    #content {
-      width: 50%;
-    }
-
-    #main-heading {
-      font-size: 80px;
-    }
+  #main-heading {
+    font-size: 80px;
   }
+}
