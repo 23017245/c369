@@ -17,7 +17,6 @@ document.getElementById('pay-btn').addEventListener('click', function () {
 
     // confirm transaction
     if (confirm(`Are you sure you want to withdraw $${amount.toFixed(2)}?`)) {
-      // update balance
       const newBalance = currentBalance - amount;
       balanceElement.textContent = formatCurrency(newBalance);
 
@@ -43,6 +42,8 @@ document.getElementById('pay-btn').addEventListener('click', function () {
     alert('Please enter a valid amount.');
   }
 });
+
+window.location('index.html');
 
 // top-up button
 document.getElementById('top-up-btn').addEventListener('click', function () {
@@ -81,7 +82,7 @@ document.getElementById('top-up-btn').addEventListener('click', function () {
     alert('Please enter a valid amount.');
   }
 });
-// Initialize payment in url
+// initialize payment in url
 const params = new URLSearchParams(window.location.search);
 const amount = params.get('amount');
 if (amount) {
